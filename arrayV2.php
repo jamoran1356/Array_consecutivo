@@ -24,6 +24,6 @@ function solution($sequence) {
 }
             
            
-$sequence = [10, 2, 3, 4, 3, 6]; //expected true
+$sequence = [10, 2, 3, 4, 3, 6]; //expected false
 echo solution($sequence);
 ?>
