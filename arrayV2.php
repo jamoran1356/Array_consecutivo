@@ -11,6 +11,7 @@ function solution($sequence) {
         if ($sequence[$i] <= $sequence[$i-1]) {
             $removed++;
             if ($removed > 1) {
+                echo "falso";
                 return false;
             }
             if ($i > 1 && $sequence[$i] <= $sequence[$i-2]) {
@@ -18,10 +19,11 @@ function solution($sequence) {
             }
         }
     }
+    echo "verdadero";
     return true;
 }
             
            
-$sequence = [1, 2, 3, 4, 3, 6]; //expected true
+$sequence = [10, 2, 3, 4, 3, 6]; //expected true
 echo solution($sequence);
 ?>
