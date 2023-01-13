@@ -53,7 +53,7 @@ function solution($sequence) {
                                             }
                                         }
                                         
-                                        
+
                                     }
                                 }                                
 
@@ -94,16 +94,10 @@ function solution($sequence) {
                    
 }               
             
-    
-
-
-
-
-
 
 // $sequence = [40, 50, 60, 10, 20, 30]; falso
 // $sequence = [1, 2, 1, 2]; falso
 
-$sequence = [1, 2, 3, 4, 3, 6]; //expected false
+$sequence = [1, 2, 3, 4, 3, 6]; //expected true
 echo solution($sequence);
 ?>
