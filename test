@@ -1,0 +1,239 @@
+/* 17 de 19*/
+    $len = count($sequence);
+    $contador = 0;
+    $y =0;
+    if($len==1){
+       return true;    
+    } else {
+            for ($i=0; $i<=$len-2;$i++){
+                if($i==0){
+                    if($sequence[$i]>$sequence[$i+1]){
+                        unset($sequence[$i]);
+                        $contador = $contador +1;
+                    }
+                }
+                if($sequence[$i]<$sequence[$i+1]){
+                } else {
+                        unset($sequence[$i+1]);
+                        $contador = $contador + 1;
+                        $ln = count($sequence);
+                        $sequence = array_unique($sequence);
+                        $lx = count($sequence);
+                                if($lx==$ln){
+                                        foreach($sequence as $p=>$x){
+                                            $new[]=$x;
+                                        }
+                                        for($t=0;$t<=$lx-2;$t++){
+                                            if($new[$t]<$new[$t+1]){
+                                            }else{
+                                                $contador = $contador +1;
+                                            }
+                                        }
+                                    
+                                } else {
+                                    $contador = $contador +1;
+                                }
+                        }
+
+                }
+            }
+                   
+if($contador>1){
+    return false;
+}else {
+    return true;
+} 
+    /*17 de 19*/
+
+
+
+                    /*
+                    hago la comparacion 
+                    */
+                    if($sequence[$i]<$sequence[$i+1]){
+                        /*
+                        no hago nada :D
+                        */
+                    } else {
+                        unset($sequence[$i+1]);
+                        $contador = $contador + 1;
+                        $ln = count($sequence);
+                        $sequence = array_unique($sequence);
+                        $lx = count($sequence);
+                                if($lx==$ln){
+                                        foreach($sequence as $p=>$x){
+                                            $new[]=$x;
+                                        }
+                                        for($t=0;$t<=$lx-2;$t++){
+                                            if($new[$t]<$new[$t+1]){
+                                            }else{
+                                                $contador = $contador +1;
+                                            }
+                                        }
+                                    
+                                } else {
+                                    $contador = $contador +1;
+                                }
+                    }
+                }
+                /*
+                una vez realizada la primera comprobacion, comprobamos el tamaño del array
+                */ 
+                $lx = count($sequence);
+
+                /*
+                Comparamos el resultado con el largo inicial, si es igual quiere decir que aun $contador esta en 0 y que el array permanece intacto, lo que significa que no hay numero superior al inicio del array
+                */
+                if ($lx==$len){
+                    /*
+                    hacemos el recorrido de forma normal, pues nada ha cambiado hasta aqui
+                    */
+                    if($sequence[$i]<$sequence[$i+1]){
+                        //Todo bien, la secuencia es ascendente
+                    } else {
+                        /*
+                        procedemos a eliminar el registro que esta por delante(que es menor), sumamos 1 a contador y vemos el tamaño del array
+                        */
+                        unset($sequence[$i+1]);
+                        $contador = $contador + 1;
+                        /*
+                        actualizo la variable lx
+                        */
+                        $lx = count($sequence);
+                        /*
+                        Aqui ya se ha eliminado el registro, por lo que ahora verificamos que no haya datos duplicados, si  hay datos duplicados, sumamos 1 al contador
+                        */
+                        $sequence = array_unique($sequence);
+                        /*
+                        procedo a verificar si el tamaño del array es el mismo, si no lo es quiere decir que habia un registro duplicado, por lo que se suma 1 al contador
+                        */
+                        if($lx==$len){
+                            /*
+                            si es el mismo tamaño procedemos a crea un nuevo array para proceder a realizar un nuevo recorrido, si no lo es, sumamos uno al contador
+                            */
+                            foreach($sequence as $p=>$x){
+                                $new[]=$x;
+                            }
+                            for($t=0;$t<=$lx-2;$t++){
+                                /*
+                                realizamos el recorrido
+                                */
+                                if ($new[$t]<$new[$t+1]){
+                                    /*
+                                    no hacemos nada
+                                    */
+                                } else {
+                                    /*
+                                    sumamos 1 mas al contador
+                                    */
+                                    $contador = $contador +1;
+                                }
+                            }
+                        } else {
+                            $contador = $contador +1;
+                        }
+
+                    }                        
+               }
+            }
+    }
+    /*17 de 19/* 
+
+
+
+
+
+
+
+
+/*
+                    hago la comparacion 
+                    */
+                    if($sequence[$i]<$sequence[$i+1]){
+                        /*
+                        no hago nada :D
+                        */
+                    } else {
+                        unset($sequence[$i+1]);
+                        $contador = $contador + 1;
+                        $ln = count($sequence);
+                        $sequence = array_unique($sequence);
+                        $lx = count($sequence);
+                                if($lx==$ln){
+                                        foreach($sequence as $p=>$x){
+                                            $new[]=$x;
+                                        }
+                                        for($t=0;$t<=$lx-2;$t++){
+                                            if($new[$t]<$new[$t+1]){
+                                            }else{
+                                                $contador = $contador +1;
+                                            }
+                                        }
+                                    
+                                } else {
+                                    $contador = $contador +1;
+                                }
+                    }
+                }
+                /*
+                una vez realizada la primera comprobacion, comprobamos el tamaño del array
+                */ 
+                $lx = count($sequence);
+
+                /*
+                Comparamos el resultado con el largo inicial, si es igual quiere decir que aun $contador esta en 0 y que el array permanece intacto, lo que significa que no hay numero superior al inicio del array
+                */
+                if ($lx==$len){
+                    /*
+                    hacemos el recorrido de forma normal, pues nada ha cambiado hasta aqui
+                    */
+                    if($sequence[$i]<$sequence[$i+1]){
+                        //Todo bien, la secuencia es ascendente
+                    } else {
+                        /*
+                        procedemos a eliminar el registro que esta por delante(que es menor), sumamos 1 a contador y vemos el tamaño del array
+                        */
+                        unset($sequence[$i+1]);
+                        $contador = $contador + 1;
+                        /*
+                        actualizo la variable lx
+                        */
+                        $lx = count($sequence);
+                        /*
+                        Aqui ya se ha eliminado el registro, por lo que ahora verificamos que no haya datos duplicados, si  hay datos duplicados, sumamos 1 al contador
+                        */
+                        $sequence = array_unique($sequence);
+                        /*
+                        procedo a verificar si el tamaño del array es el mismo, si no lo es quiere decir que habia un registro duplicado, por lo que se suma 1 al contador
+                        */
+                        if($lx==$len){
+                            /*
+                            si es el mismo tamaño procedemos a crea un nuevo array para proceder a realizar un nuevo recorrido, si no lo es, sumamos uno al contador
+                            */
+                            foreach($sequence as $p=>$x){
+                                $new[]=$x;
+                            }
+                            for($t=0;$t<=$lx-2;$t++){
+                                /*
+                                realizamos el recorrido
+                                */
+                                if ($new[$t]<$new[$t+1]){
+                                    /*
+                                    no hacemos nada
+                                    */
+                                } else {
+                                    /*
+                                    sumamos 1 mas al contador
+                                    */
+                                    $contador = $contador +1;
+                                }
+                            }
+                        } else {
+                            $contador = $contador +1;
+                        }
+
+                    }                        
+               }
+            }
+    }
+    /*
